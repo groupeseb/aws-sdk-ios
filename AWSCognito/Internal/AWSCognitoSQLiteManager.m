@@ -13,8 +13,8 @@
 #import "AWSCognitoConstants.h"
 #import "AWSCognitoDataset_Internal.h"
 #import "AWSCognitoRecord_Internal.h"
-#import <AWSCore/AWSCocoaLumberjack.h>
-#import <AWSCore/AWSCredentialsProvider.h>
+#import "AWSCocoaLumberjack.h"
+#import "AWSCredentialsProvider.h"
 #import "AWSCognitoConflict_Internal.h"
 #import "AWSCognitoSyncService.h"
 

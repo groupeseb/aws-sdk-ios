@@ -6,19 +6,19 @@
 //
 
 #import "AWSCognitoService.h"
-#import <AWSCore/AWSCredentialsProvider.h>
+#import "AWSCredentialsProvider.h"
 #import "AWSCognitoRecord_Internal.h"
 #import "AWSCognitoSQLiteManager.h"
 #import "AWSCognitoDataset.h"
 #import "AWSCognitoConstants.h"
 #import "AWSCognitoUtil.h"
 #import "AWSCognitoDataset_Internal.h"
-#import <AWSCore/AWSCocoaLumberjack.h>
+#import "AWSCocoaLumberjack.h"
 #import "AWSCognitoHandlers.h"
 #import "AWSCognitoConflict_Internal.h"
-#import <AWSCore/AWSUICKeyChainStore.h>
-#import <AWSCore/AWSSynchronizedMutableDictionary.h>
-#import <AWSCore/AWSInfo.h>
+#import "AWSUICKeyChainStore.h"
+#import "AWSSynchronizedMutableDictionary.h"
+#import "AWSInfo.h"
 
 #import "FABKitProtocol.h"
 #import "Fabric+FABKits.h"

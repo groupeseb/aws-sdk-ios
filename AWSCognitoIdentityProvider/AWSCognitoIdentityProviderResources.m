@@ -14,7 +14,7 @@
 //
 
 #import "AWSCognitoIdentityProviderResources.h"
-#import <AWSCore/AWSCocoaLumberjack.h>
+#import "AWSCocoaLumberjack.h"
 
 @interface AWSCognitoIdentityProviderResources ()
 

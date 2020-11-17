@@ -12,7 +12,7 @@
 #import "AWSCognitoRecord_Internal.h"
 #import "AWSCognitoSQLiteManager.h"
 #import "AWSCognitoConflict_Internal.h"
-#import <AWSCore/AWSCocoaLumberjack.h>
+#import "AWSCocoaLumberjack.h"
 #import "AWSCognitoRecord.h"
 #import "AWSKSReachability.h"
 

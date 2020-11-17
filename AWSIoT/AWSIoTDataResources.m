@@ -14,7 +14,7 @@
 //
 
 #import "AWSIoTDataResources.h"
-#import <AWSCore/AWSCocoaLumberjack.h>
+#import "AWSCocoaLumberjack.h"
 
 @interface AWSIoTDataResources ()
 

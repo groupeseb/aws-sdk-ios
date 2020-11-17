@@ -14,7 +14,7 @@
 //
 
 #import "AWSCognitoSyncResources.h"
-#import <AWSCore/AWSCocoaLumberjack.h>
+#import "AWSCocoaLumberjack.h"
 
 @interface AWSCognitoSyncResources ()
 

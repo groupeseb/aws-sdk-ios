@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AWSCore/AWSCore.h>
+#import "AWSCore.h"
 #import "AWSCognitoHandlers.h"
 #import "AWSCognitoSyncService.h"
 

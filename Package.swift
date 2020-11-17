@@ -21,50 +21,42 @@ let package = Package(
         .target(name: "AWSCore",
                 path: "AWSCore",
                 cSettings: [
-                    .headerSearchPath("./Authentication"),
-                    .headerSearchPath("./Utility"),
-                    .headerSearchPath("./Serialization"),
-                    .headerSearchPath("./Service"),
-                    .headerSearchPath("./Networking"),
-                    .headerSearchPath("./Mantle"),
-                    .headerSearchPath("./Mantle/extobjc"),
-                    .headerSearchPath("./Logging"),
-                    .headerSearchPath("./Logging/Extensions"),
-                    .headerSearchPath("./Fabric"),
-                    .headerSearchPath("./GZIP"),
-                    .headerSearchPath("./Bolts"),
-                    .headerSearchPath("./XMLWriter"),
-                    .headerSearchPath("./XMLDictionary"),
-                    .headerSearchPath("./FMDB"),
-                    .headerSearchPath("./CognitoIdentity"),
-                    .headerSearchPath("./KSReachability"),
-                    .headerSearchPath("./TMCache"),
-                    .headerSearchPath("./UICKeyChainStore"),
-                    .headerSearchPath("./STS"),
-                    .headerSearchPath("./"),
-                    .headerSearchPath("")
+                    .headerSearchPath("./includes")
                 ]),
         .target(name: "AWSIoT",
                 dependencies: ["AWSCore"],
                 path: "AWSIoT",
                 cSettings: [
-                    .headerSearchPath(""),
-                    .headerSearchPath("./Internal"),
-                    .headerSearchPath("./Internal/MQTTSDK"),
-                    .headerSearchPath("./Internal/SocketRocket"),
-                    .headerSearchPath("../AWSCore/Logging"),
-                    .headerSearchPath("../AWSCore/Networking"),
+                    .headerSearchPath("./includes"),
+                    .headerSearchPath("../AWSCore/includes")
                 ]),
         .target(name: "AWSCognitoIdentityProviderASF",
-                path: "AWSCognitoIdentityProviderASF"),
+                path: "AWSCognitoIdentityProviderASF",
+                cSettings: [
+                    .headerSearchPath("./includes")
+                ]),
         .target(name: "AWSCognitoIdentityProvider",
                 dependencies: ["AWSCore", "AWSCognitoIdentityProviderASF"],
-                path: "AWSCognitoIdentityProvider"),
+                path: "AWSCognitoIdentityProvider",
+                cSettings: [
+                    .headerSearchPath("./includes"),
+                    .headerSearchPath("../AWSCore/includes"),
+                    .headerSearchPath("../AWSCognitoIdentityProviderASF/includes"),
+                ]),
         .target(name: "AWSCognitoAuth",
                 dependencies: ["AWSCore", "AWSCognitoIdentityProviderASF"],
-                path: "AWSCognitoAuth"),
+                path: "AWSCognitoAuth",
+                cSettings: [
+                    .headerSearchPath("./includes"),
+                    .headerSearchPath("../AWSCore/includes"),
+                    .headerSearchPath("../AWSCognitoIdentityProviderASF/includes"),
+                ]),
         .target(name: "AWSCognito",
                 dependencies: ["AWSCore"],
-                path: "AWSCognito")
+                path: "AWSCognito",
+                cSettings: [
+                    .headerSearchPath("./includes"),
+                    .headerSearchPath("../AWSCore/includes")
+                ])
     ]
 )
