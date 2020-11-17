@@ -19,44 +19,20 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(name: "AWSCore",
-                path: "AWSCore",
-                cSettings: [
-                    .headerSearchPath("./includes")
-                ]),
+                path: "AWSCore"),
         .target(name: "AWSIoT",
                 dependencies: ["AWSCore"],
-                path: "AWSIoT",
-                cSettings: [
-                    .headerSearchPath("./includes"),
-                    .headerSearchPath("../AWSCore/includes")
-                ]),
+                path: "AWSIoT"),
         .target(name: "AWSCognitoIdentityProviderASF",
-                path: "AWSCognitoIdentityProviderASF",
-                cSettings: [
-                    .headerSearchPath("./includes")
-                ]),
+                path: "AWSCognitoIdentityProviderASF"),
         .target(name: "AWSCognitoIdentityProvider",
                 dependencies: ["AWSCore", "AWSCognitoIdentityProviderASF"],
-                path: "AWSCognitoIdentityProvider",
-                cSettings: [
-                    .headerSearchPath("./includes"),
-                    .headerSearchPath("../AWSCore/includes"),
-                    .headerSearchPath("../AWSCognitoIdentityProviderASF/includes"),
-                ]),
+                path: "AWSCognitoIdentityProvider"),
         .target(name: "AWSCognitoAuth",
                 dependencies: ["AWSCore", "AWSCognitoIdentityProviderASF"],
-                path: "AWSCognitoAuth",
-                cSettings: [
-                    .headerSearchPath("./includes"),
-                    .headerSearchPath("../AWSCore/includes"),
-                    .headerSearchPath("../AWSCognitoIdentityProviderASF/includes"),
-                ]),
+                path: "AWSCognitoAuth"),
         .target(name: "AWSCognito",
                 dependencies: ["AWSCore"],
-                path: "AWSCognito",
-                cSettings: [
-                    .headerSearchPath("./includes"),
-                    .headerSearchPath("../AWSCore/includes")
-                ])
+                path: "AWSCognito")
     ]
 )
